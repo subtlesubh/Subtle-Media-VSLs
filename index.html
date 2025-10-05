@@ -18,11 +18,25 @@
         body {
             font-family: 'Manrope', sans-serif;
             background-color: #0A0A0A; /* Black background */
-            /* Two gradients: one top left, one bottom left */
+            /* A single, darker, more focused gradient from the top left */
             background-image: 
-                radial-gradient(ellipse 40% 50% at top left, #2d2d2d, transparent),
-                radial-gradient(ellipse 40% 50% at bottom left, #2d2d2d, transparent);
+                radial-gradient(ellipse 50% 70% at top left, #222, transparent);
             color: #E2E8F0; /* Light gray for text */
+            position: relative; /* Needed for the noise overlay */
+        }
+
+        /* Noise overlay */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            filter: url(#noise);
+            opacity: 0.12;
+            z-index: -1;
         }
 
         /* Gradient text effect - White/Gray */
@@ -30,6 +44,11 @@
             background: linear-gradient(90deg, #a1a1aa, #e5e7eb, #ffffff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        /* Added glow effect */
+        .glow {
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
         }
 
         /* Glassmorphism effect for cards (Dark Theme) - Made more neutral */
@@ -87,6 +106,13 @@
     </style>
 </head>
 <body class="antialiased">
+    <!-- SVG Noise Filter Definition -->
+    <svg style="position:absolute; width:0; height:0; overflow:hidden;" xmlns="http://www.w3.org/2000/svg">
+        <filter id="noise">
+            <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"></feTurbulence>
+            <feColorMatrix type="saturate" values="0"></feColorMatrix>
+        </filter>
+    </svg>
 
     <!-- Header -->
     <header class="sticky top-0 z-50 py-4 intro-animate" style="animation-delay: 100ms;">
@@ -124,7 +150,7 @@
         <section class="py-24 md:py-32 text-center">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight intro-animate" style="animation-delay: 200ms;">
-                    Turn your story into <span class="gradient-text">revenue.</span>
+                    Turn your story into <span class="gradient-text glow">revenue.</span>
                 </h2>
                 <p class="mt-6 max-w-2xl mx-auto text-base md:text-lg text-slate-400 intro-animate" style="animation-delay: 400ms;">
                     Subtle Media crafts high-converting Video Sales Letters (VSLs) for the most innovative SaaS & AI companies.
@@ -441,6 +467,10 @@
     </script>
 </body>
 </html>
+
+
+
+
 
 
 
