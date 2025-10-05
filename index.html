@@ -74,7 +74,7 @@
         .faq-answer {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-in-out;
+            transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
         }
 
         @keyframes slideInUp {
@@ -123,7 +123,7 @@
                     <img src="https://i.postimg.cc/9Dy2dkg1/logo.png" alt="Subtle Media Logo" class="h-8 w-8">
                 </a>
 
-                <!-- Centered Nav -->
+                <!-- Centered Nav (Desktop) -->
                 <nav class="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 items-center space-x-1 bg-black/25 rounded-full p-1">
                     <a href="#services" class="text-slate-300 hover:text-white transition-colors px-4 py-1.5 rounded-full text-sm font-medium hover:bg-white/10">Services</a>
                     <a href="#process" class="text-slate-300 hover:text-white transition-colors px-4 py-1.5 rounded-full text-sm font-medium hover:bg-white/10">Process</a>
@@ -131,16 +131,27 @@
                     <a href="#faq" class="text-slate-300 hover:text-white transition-colors px-4 py-1.5 rounded-full text-sm font-medium hover:bg-white/10">FAQ</a>
                 </nav>
 
-                <!-- Right CTA -->
+                <!-- Right CTA (Desktop) -->
                 <a href="#contact" class="hidden md:flex items-center space-x-2 text-slate-200 hover:text-white font-medium py-1.5 px-5 rounded-full hover:bg-white/10 transition-all duration-300 text-sm">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
                     <span>Get a Proposal</span>
                 </a>
 
                 <!-- Mobile Menu Button -->
-               <button class="md:hidden text-white pr-2">
+               <button id="mobile-menu-button" class="md:hidden text-white pr-2 z-50">
                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-2 glass-card rounded-xl">
+                <nav class="flex flex-col p-2 space-y-1">
+                    <a href="#services" class="text-slate-300 hover:text-white transition-colors px-4 py-2.5 rounded-lg font-medium hover:bg-white/10">Services</a>
+                    <a href="#process" class="text-slate-300 hover:text-white transition-colors px-4 py-2.5 rounded-lg font-medium hover:bg-white/10">Process</a>
+                    <a href="#pricing" class="text-slate-300 hover:text-white transition-colors px-4 py-2.5 rounded-lg font-medium hover:bg-white/10">Pricing</a>
+                    <a href="#faq" class="text-slate-300 hover:text-white transition-colors px-4 py-2.5 rounded-lg font-medium hover:bg-white/10">FAQ</a>
+                    <a href="#contact" class="text-slate-300 hover:text-white transition-colors px-4 py-2.5 rounded-lg font-medium hover:bg-white/10">Get a Proposal</a>
+                </nav>
             </div>
         </div>
     </header>
@@ -333,7 +344,7 @@
                                 <span>Advanced Storyboarding</span>
                             </li>
                             <li class="flex items-start">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-400 mr-3 shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-400 mr-3 shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
                                 <span>Dedicated Success Manager</span>
                             </li>
                         </ul>
@@ -430,10 +441,30 @@
 
 
     <script>
-        // JavaScript for scroll animations
         document.addEventListener('DOMContentLoaded', () => {
-            const fadeInElements = document.querySelectorAll('.fade-in');
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIconOpen = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>`;
+            const menuIconClose = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`;
 
+            mobileMenuButton.addEventListener('click', () => {
+                const isHidden = mobileMenu.classList.toggle('hidden');
+                mobileMenuButton.innerHTML = isHidden ? menuIconOpen : menuIconClose;
+            });
+
+            // Close mobile menu when a link is clicked
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.innerHTML = menuIconOpen;
+                });
+            });
+
+
+            // Scroll Animations
+            const fadeInElements = document.querySelectorAll('.fade-in');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -443,30 +474,24 @@
             }, {
                 threshold: 0.1
             });
+            fadeInElements.forEach(el => observer.observe(el));
 
-            fadeInElements.forEach(el => {
-                observer.observe(el);
-            });
-
-            // JavaScript for FAQ accordion
+            // FAQ Accordion
             const faqQuestions = document.querySelectorAll('.faq-question');
             faqQuestions.forEach(button => {
                 button.addEventListener('click', () => {
                     const answer = button.nextElementSibling;
                     const icon = button.querySelector('svg');
 
-                    if (answer.style.maxHeight) {
-                        answer.style.maxHeight = null;
-                        icon.style.transform = 'rotate(0deg)';
-                    } else {
-                        // Close any other open answers
-                        faqQuestions.forEach(otherButton => {
-                            const otherAnswer = otherButton.nextElementSibling;
-                            if (otherAnswer.style.maxHeight) {
-                                otherAnswer.style.maxHeight = null;
-                                otherButton.querySelector('svg').style.transform = 'rotate(0deg)';
-                            }
-                        })
+                    const isOpening = !answer.style.maxHeight;
+
+                    // Close all other open answers
+                    document.querySelectorAll('.faq-answer').forEach(el => {
+                        el.style.maxHeight = null;
+                        el.previousElementSibling.querySelector('svg').style.transform = 'rotate(0deg)';
+                    });
+                    
+                    if (isOpening) {
                         answer.style.maxHeight = answer.scrollHeight + 'px';
                         icon.style.transform = 'rotate(180deg)';
                     }
