@@ -16,12 +16,16 @@
     
     <style>
         /* Custom styles to augment Tailwind */
+        :root {
+            --x: 50%;
+            --y: 50%;
+        }
+        
         body {
             font-family: 'Manrope', sans-serif;
             background-color: #0A0A0A; /* Black background */
             /* A single, darker, more focused gradient from the top left */
-            background-image: 
-                radial-gradient(ellipse 50% 70% at top left, #222, transparent);
+            background-image: radial-gradient(circle 600px at var(--x) var(--y), rgba(34, 34, 34, 0.5), transparent 80%);
             color: #E2E8F0; /* Light gray for text */
             position: relative; /* Needed for the noise overlay */
         }
@@ -443,6 +447,12 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Interactive Spotlight Effect
+            document.addEventListener('mousemove', e => {
+                document.documentElement.style.setProperty('--x', e.clientX + 'px');
+                document.documentElement.style.setProperty('--y', e.clientY + 'px');
+            });
+
             // Mobile Menu Toggle
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
