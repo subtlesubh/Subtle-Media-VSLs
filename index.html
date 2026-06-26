@@ -117,7 +117,6 @@
             left: 0;
             width: 100%;
             height: 100%;
-            pointer-events: none; /* Disables all clicks, taps, and play/pause controls */
         }
     </style>
 </head>
@@ -182,8 +181,10 @@
                 <div id="work" class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto intro-animate" style="animation-delay: 700ms;">
                     <!-- Video 1 -->
                     <div class="glass-card p-3 rounded-2xl">
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/iF2QbgJnwhE?autoplay=1&mute=1&controls=0&loop=1&playlist=iF2QbgJnwhE&rel=0&playsinline=1" title="Subtle Media Showcase 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="video-container relative">
+                            <!-- Overlay to prevent manual pause/play/hover interface -->
+                            <div class="absolute inset-0 bg-transparent z-20 cursor-default"></div>
+                            <div id="player1" class="yt-player w-full h-full absolute top-0 left-0 z-10" data-video-id="iF2QbgJnwhE"></div>
                         </div>
                         <div class="mt-4 px-1 text-left">
                             <h3 class="text-sm font-bold text-white">High-Converting Creative</h3>
@@ -193,8 +194,10 @@
 
                     <!-- Video 2 -->
                     <div class="glass-card p-3 rounded-2xl">
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/8i4ID9FlrXw?autoplay=1&mute=1&controls=0&loop=1&playlist=8i4ID9FlrXw&rel=0&playsinline=1" title="Subtle Media Showcase 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="video-container relative">
+                            <!-- Overlay to prevent manual pause/play/hover interface -->
+                            <div class="absolute inset-0 bg-transparent z-20 cursor-default"></div>
+                            <div id="player2" class="yt-player w-full h-full absolute top-0 left-0 z-10" data-video-id="8i4ID9FlrXw"></div>
                         </div>
                         <div class="mt-4 px-1 text-left">
                             <h3 class="text-sm font-bold text-white">Visual Storytelling</h3>
@@ -204,8 +207,10 @@
 
                     <!-- Video 3 (New Added Video Container) -->
                     <div class="glass-card p-3 rounded-2xl">
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/flRxnaGPL4w?autoplay=1&mute=1&controls=0&loop=1&playlist=flRxnaGPL4w&rel=0&playsinline=1" title="Subtle Media Showcase 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="video-container relative">
+                            <!-- Overlay to prevent manual pause/play/hover interface -->
+                            <div class="absolute inset-0 bg-transparent z-20 cursor-default"></div>
+                            <div id="player3" class="yt-player w-full h-full absolute top-0 left-0 z-10" data-video-id="flRxnaGPL4w"></div>
                         </div>
                         <div class="mt-4 px-1 text-left">
                             <h3 class="text-sm font-bold text-white">Product-Led Motion</h3>
@@ -454,6 +459,62 @@
                 });
             });
         });
+
+        // Load YouTube IFrame Player API
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        let players = [];
+
+        window.onYouTubeIframeAPIReady = function() {
+            const playerElements = document.querySelectorAll('.yt-player');
+            playerElements.forEach((el) => {
+                const videoId = el.getAttribute('data-video-id');
+                const player = new YT.Player(el.id, {
+                    videoId: videoId,
+                    playerVars: {
+                        autoplay: 1,
+                        mute: 1,
+                        controls: 0,
+                        loop: 1,
+                        playlist: videoId,
+                        rel: 0,
+                        playsinline: 1,
+                        showinfo: 0,
+                        enablejsapi: 1,
+                        modestbranding: 1
+                    },
+                    events: {
+                        onReady: (event) => {
+                            event.target.mute();
+                            event.target.playVideo();
+                        },
+                        onStateChange: (event) => {
+                            // Ensure the video stays playing and loops
+                            if (event.data === YT.PlayerState.ENDED) {
+                                event.target.playVideo();
+                            } else if (event.data === YT.PlayerState.PAUSED) {
+                                event.target.playVideo();
+                            }
+                        }
+                    }
+                });
+                players.push(player);
+            });
+        };
+
+        // Bypass browser restrictions on the very first touch/click interaction on the site
+        const triggerAutoplayBypass = () => {
+            players.forEach(player => {
+                if (player && typeof player.playVideo === 'function') {
+                    player.playVideo();
+                }
+            });
+        };
+        document.addEventListener('click', triggerAutoplayBypass, { once: true });
+        document.addEventListener('touchstart', triggerAutoplayBypass, { once: true });
     </script>
 </body>
 </html>
