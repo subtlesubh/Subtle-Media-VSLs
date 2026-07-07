@@ -227,9 +227,9 @@
         </header>
 
         <main>
-            <!-- Hero Section -->
+            <!-- Hero Section with Extended Horizontal Padding / Inset Increments -->
             <section class="pt-12 pb-16 md:pt-20 md:pb-24">
-                <div class="container mx-auto px-6">
+                <div class="container mx-auto px-10 sm:px-16 md:px-24 lg:px-32 xl:px-44">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                         
                         <!-- Left Side: Hero Brand Copy -->
@@ -268,63 +268,683 @@
                 </div>
             </section>
 
-            <!-- Separate Work Section -->
+            <!-- Separate Grand Work Section with Sized-up Cards and Playback Controls -->
             <section id="work" class="py-20 border-t border-zinc-800/50 bg-black/40">
                 <div class="container mx-auto px-6">
                     <div class="text-center max-w-3xl mx-auto mb-16">
                         <h2 class="text-3xl md:text-4xl font-bold text-white fade-in">Our Featured Case Studies</h2>
-                        <p class="mt-4 text-slate-400 fade-in">Explore our latest high-performing visual creative structured for deep user persuasion.</p>
+                        <p class="mt-4 text-slate-400 fade-in">Explore our latest high-performing visual creative structured for deep user persuasion. Click any layout to play/pause.</p>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl mx-auto">
                         <!-- Video 1 -->
-                        <div class="glass-card p-3 rounded-2xl fade-in">
+                        <div class="glass-card p-5 rounded-3xl fade-in transition-all duration-300 hover:border-zinc-700/80 hover:shadow-[0_10px_30px_rgba(255,255,255,0.02)]">
                             <div class="video-container relative">
-                                <!-- Overlay shield -->
-                                <div class="absolute inset-0 bg-transparent z-20 cursor-default"></div>
-                                <iframe class="w-full h-full absolute top-0 left-0 z-10 pointer-events-none" 
-                                        src="https://www.youtube.com/embed/8i4ID9FlrXw?autoplay=1&mute=1&loop=1&playlist=8i4ID9FlrXw&controls=0&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1" 
+                                <iframe class="w-full h-full absolute top-0 left-0 z-10" 
+                                        src="https://www.youtube.com/embed/8i4ID9FlrXw?autoplay=1&mute=1&loop=1&playlist=8i4ID9FlrXw&controls=1&modestbranding=1&rel=0" 
                                         frameborder="0" 
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                         allowfullscreen></iframe>
                             </div>
-                            <div class="mt-4 px-1 text-left">
-                                <h3 class="text-sm font-bold text-white">High-Converting Creative</h3>
-                                <p class="text-slate-400 text-xs mt-1">Strategic scripting for modern SaaS.</p>
+                            <div class="mt-6 px-1 text-left">
+                                <h3 class="text-lg font-bold text-white">High-Converting Creative</h3>
+                                <p class="text-slate-400 text-sm mt-1.5">Strategic scripting for modern SaaS.</p>
                             </div>
                         </div>
 
                         <!-- Video 2 -->
-                        <div class="glass-card p-3 rounded-2xl fade-in" style="transition-delay: 100ms;">
+                        <div class="glass-card p-5 rounded-3xl fade-in transition-all duration-300 hover:border-zinc-700/80 hover:shadow-[0_10px_30px_rgba(255,255,255,0.02)]" style="transition-delay: 100ms;">
                             <div class="video-container relative">
-                                <!-- Overlay shield -->
-                                <div class="absolute inset-0 bg-transparent z-20 cursor-default"></div>
-                                <iframe class="w-full h-full absolute top-0 left-0 z-10 pointer-events-none" 
-                                        src="https://www.youtube.com/embed/flRxnaGPL4w?autoplay=1&mute=1&loop=1&playlist=flRxnaGPL4w&controls=0&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1" 
+                                <iframe class="w-full h-full absolute top-0 left-0 z-10" 
+                                        src="https://www.youtube.com/embed/flRxnaGPL4w?autoplay=1&mute=1&loop=1&playlist=flRxnaGPL4w&controls=1&modestbranding=1&rel=0" 
                                         frameborder="0" 
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                         allowfullscreen></iframe>
                             </div>
-                            <div class="mt-4 px-1 text-left">
-                                <h3 class="text-sm font-bold text-white">Visual Storytelling</h3>
-                                <p class="text-slate-400 text-xs mt-1">Commercial narrative for AI infra.</p>
+                            <div class="mt-6 px-1 text-left">
+                                <h3 class="text-lg font-bold text-white">Visual Storytelling</h3>
+                                <p class="text-slate-400 text-sm mt-1.5">Commercial narrative for AI infra.</p>
                             </div>
                         </div>
 
                         <!-- Video 3 -->
-                        <div class="glass-card p-3 rounded-2xl fade-in" style="transition-delay: 200ms;">
+                        <div class="glass-card p-5 rounded-3xl fade-in transition-all duration-300 hover:border-zinc-700/80 hover:shadow-[0_10px_30px_rgba(255,255,255,0.02)]" style="transition-delay: 200ms;">
                             <div class="video-container relative">
-                                <!-- Overlay shield -->
-                                <div class="absolute inset-0 bg-transparent z-20 cursor-default"></div>
-                                <iframe class="w-full h-full absolute top-0 left-0 z-10 pointer-events-none" 
-                                        src="https://www.youtube.com/embed/iF2QbgJnwhE?autoplay=1&mute=1&loop=1&playlist=iF2QbgJnwhE&controls=0&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1" 
+                                <iframe class="w-full h-full absolute top-0 left-0 z-10" 
+                                        src="https://www.youtube.com/embed/iF2QbgJnwhE?autoplay=1&mute=1&loop=1&playlist=iF2QbgJnwhE&controls=1&modestbranding=1&rel=0" 
                                         frameborder="0" 
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                         allowfullscreen></iframe>
                             </div>
-                            <div class="mt-4 px-1 text-left">
-                                <h3 class="text-sm font-bold text-white">Product-Led Motion</h3>
-                                <p class="text-slate-400 text-xs mt-1">Interactive animation capturing high-intent buyers.</p>
+                            <div class="mt-6 px-1 text-left">
+                                <h3 class="text-lg font-bold text-white">Product-Led Motion</h3>
+                                <p class="text-slate-400 text-sm mt-1.5">Interactive animation capturing high-intent buyers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services" class="py-20 md:py-28">
+                <div class="container mx-auto px-6">
+                    <div class="text-center max-w-3xl mx-auto">
+                        <h2 class="text-3xl md:text-4xl font-bold text-white fade-in">The VSLs That Actually Convert</h2>
+                        <p class="mt-4 text-slate-400 fade-in">Our approach combines persuasive storytelling with data-driven optimization to create VSLs that don't just get views—they get results.</p>
+                    </div>
+                    <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Service 1 -->
+                        <div class="glass-card p-8 rounded-2xl fade-in">
+                            <div class="w-12 h-12 bg-zinc-800/80 text-white rounded-lg flex items-center justify-center border border-zinc-700/50"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a10 10 0 0 0 10-10H2a10 10 0 0 0 10 10z"/><path d="m16 12-4-4-4 4"/><path d="M12 16V8"/></svg></div>
+                            <h3 class="mt-6 text-xl font-bold text-white">AI-Driven Strategy & Scripting</h3>
+                            <p class="mt-2 text-slate-400">We analyze market data and competitor funnels to craft scripts that resonate deeply with your ideal customer profile.</p>
+                        </div>
+                        <!-- Service 2 -->
+                        <div class="glass-card p-8 rounded-2xl fade-in" style="transition-delay: 100ms;">
+                            <div class="w-12 h-12 bg-zinc-800/80 text-white rounded-lg flex items-center justify-center border border-zinc-700/50"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
+                            <h3 class="mt-6 text-xl font-bold text-white">Premium-Quality Production</h3>
+                            <p class="mt-2 text-slate-400">From slick motion graphics to compelling live-action, our production quality ensures your brand is perceived as a leader.</p>
+                        </div>
+                        <!-- Service 3 -->
+                        <div class="glass-card p-8 rounded-2xl fade-in" style="transition-delay: 200ms;">
+                            <div class="w-12 h-12 bg-zinc-800/80 text-white rounded-lg flex items-center justify-center border border-zinc-700/50"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><path d="M12 20h.01"/><path d="M12 4h.01"/><path d="M8 20v-4"/><path d="M16 20v-4"/><path d="M12 12v-4"/></svg></div>
+                            <h3 class="mt-6 text-xl font-bold text-white">Conversion Optimization</h3>
+                            <p class="mt-2 text-slate-400">We rigorously A/B test hooks and offers to continuously improve your conversion rates post-launch.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Process Section -->
+            <section id="process" class="py-20 md:py-28">
+                <div class="container mx-auto px-6">
+                    <div class="text-center max-w-3xl mx-auto">
+                        <h2 class="text-3xl md:text-4xl font-bold text-white fade-in">Our Proven VSL Formula</h2>
+                        <p class="mt-4 text-slate-400 fade-in">Maximum impact through a refined, efficient creative process.</p>
+                    </div>
+                    <div class="mt-16 relative">
+                        <div class="hidden md:block absolute top-5 left-1/2 w-0.5 h-full -translate-x-1/2 bg-zinc-800/50"></div>
+                        
+                        <div class="md:grid md:grid-cols-2 gap-12 items-center mb-16 fade-in">
+                            <div class="text-center md:text-right md:pr-8">
+                                 <div class="text-5xl font-extrabold gradient-text">01</div>
+                                 <h3 class="text-2xl font-bold text-white mt-2">Discovery & Strategy</h3>
+                                 <p class="text-slate-400 mt-2">Deep dive into your product and audience. We map out the entire VSL funnel.</p>
+                            </div>
+                            <div class="hidden md:block"></div>
+                        </div>
+                        <div class="md:grid md:grid-cols-2 gap-12 items-center mb-16 fade-in">
+                            <div class="hidden md:block"></div>
+                            <div class="text-center md:text-left md:pl-8">
+                                <div class="text-5xl font-extrabold gradient-text">02</div>
+                                <h3 class="text-2xl font-bold text-white mt-2">Scripting & Storyboarding</h3>
+                                <p class="text-slate-400 mt-2">Our expert copywriters draft a direct-response script structured for persuasion.</p>
+                            </div>
+                        </div>
+                        <div class="md:grid md:grid-cols-2 gap-12 items-center mb-16 fade-in">
+                            <div class="text-center md:text-right md:pr-8">
+                                 <div class="text-5xl font-extrabold gradient-text">03</div>
+                                 <h3 class="text-2xl font-bold text-white mt-2">Production</h3>
+                                 <p class="text-slate-400 mt-2">Our production team brings the vision to life with professional visuals and voiceover.</p>
+                            </div>
+                            <div class="hidden md:block"></div>
+                        </div>
+                        <div class="md:grid md:grid-cols-2 gap-12 items-center fade-in">
+                            <div class="hidden md:block"></div>
+                            <div class="text-center md:text-left md:pl-8">
+                                <div class="text-5xl font-extrabold gradient-text">04</div>
+                                <h3 class="text-2xl font-bold text-white mt-2">Launch & Optimize</h3>
+                                <p class="text-slate-400 mt-2">We deliver final assets and analyze performance data to suggest optimizations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pricing Section -->
+            <section id="pricing" class="py-20 md:py-28">
+                <div class="container mx-auto px-6">
+                    <div class="text-center max-w-3xl mx-auto">
+                        <h2 class="text-3xl md:text-4xl font-bold text-white fade-in">Choose Your Partnership</h2>
+                        <p class="mt-4 text-slate-400 fade-in">Solutions that align with your business goals.</p>
+                    </div>
+                    <div class="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        <!-- Essentials -->
+                        <div class="bg-[#050505] border border-zinc-800 p-8 rounded-2xl h-full flex flex-col fade-in">
+                            <h3 class="text-xl font-bold text-white">VSL Essentials</h3>
+                            <p class="text-slate-400 mt-2">Perfect for startups.</p>
+                            <ul class="space-y-4 text-left mt-8 flex-grow text-slate-300">
+                                <li class="flex items-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-zinc-300 mr-3 shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                                    <span>AI-Driven Scripting</span>
+                                </li>
+                                 <li class="flex items-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-zinc-300 mr-3 shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                                    <span>Premium Motion Graphics</span>
+                                </li>
+                                <li class="flex items-start text-zinc-800 line-through">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                                    <span>Advanced Storyboarding</span>
+                                </li>
+                            </ul>
+                            <a href="https://tally.so/r/dW6QjN" target="_blank" class="mt-8 block w-full text-center bg-zinc-900 text-zinc-200 font-medium py-2 px-4 rounded-lg hover:bg-zinc-800 border border-zinc-800 hover:text-white transition-all duration-300">Get a Quote</a>
+                        </div>
+
+                        <!-- Growth -->
+                        <div class="bg-[#050505] p-8 rounded-2xl relative h-full flex flex-col border-2 border-zinc-400 fade-in transform lg:scale-105" style="transition-delay: 100ms;">
+                            <div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-white text-black text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Most Popular</div>
+                            <h3 class="text-xl font-bold text-white">Growth VSL</h3>
+                            <p class="text-slate-400 mt-2">For established businesses scaling.</p>
+                             <ul class="space-y-4 text-left mt-8 flex-grow text-slate-300">
+                                <li class="flex items-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-zinc-300 mr-3 shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                                    <span>AI-Driven Scripting</span>
+                                </li>
+                                 <li class="flex items-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-zinc-300 mr-3 shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                                    <span>Premium Motion Graphics</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-zinc-300 mr-3 shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                                    <span>Advanced Storyboarding</span>
+                                </li>
+                             </ul>
+                             <a href="https://tally.so/r/dW6QjN" target="_blank" class="mt-8 block w-full text-center bg-white text-black font-semibold py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors">Get a Quote</a>
+                        </div>
+
+                        <!-- Scale -->
+                        <div class="bg-[#050505] border border-zinc-800 p-8 rounded-2xl h-full flex flex-col fade-in" style="transition-delay: 200ms;">
+                            <h3 class="text-xl font-bold text-white">Scale VSL</h3>
+                            <p class="text-slate-400 mt-2">For market leaders dominant.</p>
+                            <ul class="space-y-4 text-left mt-8 flex-grow text-slate-300">
+                                <li class="flex items-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-zinc-300 mr-3 shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                                    <span>Everything in Growth, plus:</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-zinc-300 mr-3 shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                                    <span>Dedicated Success Manager</span>
+                                </li>
+                            </ul>
+                            <a href="https://tally.so/r/dW6QjN" target="_blank" class="mt-8 block w-full text-center bg-zinc-900 text-zinc-200 font-medium py-2 px-4 rounded-lg hover:bg-zinc-800 border border-zinc-800 hover:text-white transition-all duration-300">Get a Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section id="faq" class="py-20 md:py-28">
+                <div class="container mx-auto px-6 max-w-4xl">
+                    <div class="text-center">
+                        <h2 class="text-3xl md:text-4xl font-bold text-white fade-in">Frequently Asked Questions</h2>
+                    </div>
+                    <div class="mt-12 space-y-4">
+                        <div class="glass-card rounded-xl overflow-hidden fade-in">
+                            <button class="faq-question w-full flex justify-between items-center text-left text-lg font-medium text-white p-6">
+                                <span>How long does a VSL project typically take?</span>
+                                <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="px-6 pb-6">
+                                    <p class="text-slate-400">Our standard VSL process takes 4-6 weeks from strategy call to final delivery.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glass-card rounded-xl overflow-hidden fade-in">
+                            <button class="faq-question w-full flex justify-between items-center text-left text-lg font-medium text-white p-6">
+                                <span>What do you need to get started?</span>
+                                <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="px-6 pb-6">
+                                    <p class="text-slate-400">A clear understanding of your product, audience, and access to key stakeholders for discovery.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Final CTA Section -->
+            <section id="contact" class="py-20 md:py-32">
+                <div class="container mx-auto px-6 text-center">
+                     <div class="glass-card rounded-2xl p-8 md:p-12 max-w-4xl mx-auto fade-in">
+                        <h2 class="text-3xl md:text-5xl font-bold text-white">Ready to Scale?</h2>
+                        <p class="mt-4 max-w-2xl mx-auto text-slate-400 text-lg">
+                            Position yourself as the obvious choice in your market.
+                        </p>
+                        <div class="mt-8">
+                            <a href="https://tally.so/r/dW6QjN" target="_blank" class="bg-white text-black font-semibold py-4 px-10 rounded-full hover:bg-gray-200 hover:shadow-[0_0_25px_rgba(255,255,255,0.15)] transition-all duration-300 text-lg inline-block">
+                                Book Your Free Strategy Call
+                            </a>
+                        </div>
+                     </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="border-t border-zinc-900 py-8">
+            <div class="container mx-auto px-6 text-center text-slate-500">
+                <p>&copy; 2026 Subtle Media. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cursor = document.getElementById('custom-cursor');
+            const glow = document.getElementById('dynamic-glow');
+            
+            let mouseX = 0;
+            let mouseY = 0;
+            
+            let cursorX = 0;
+            let cursorY = 0;
+            
+            let glowX = 0;
+            let glowY = 0;
+            
+            let hasMoved = false;
+
+            // Start transparent, fade in on the very first pixel of mouse movement
+            if (cursor && glow) {
+                cursor.style.opacity = '0';
+                cursor.style.display = 'block';
+                glow.style.opacity = '0';
+
+                document.addEventListener('mousemove', (e) => {
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                    
+                    if (!hasMoved) {
+                        hasMoved = true;
+                        // Enable standard custom cursor behavior
+                        document.body.classList.add('custom-cursor-active');
+                        cursor.style.opacity = '1';
+                        glow.style.opacity = '1';
+                    }
+                });
+
+                // Unified high-performance 60fps tracking animation loop
+                const render = () => {
+                    // Cursor tracking speed (smooth linear interpolation)
+                    cursorX += (mouseX - cursorX) * 0.16;
+                    cursorY += (mouseY - cursorY) * 0.16;
+                    cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0)`;
+
+                    // Spotlight tracking speed (tuned to a tighter 0.2 rate for instant responsive feel)
+                    glowX += (mouseX - glowX) * 0.20;
+                    glowY += (mouseY - glowY) * 0.20;
+                    // Translate center point of the 500px glow element directly onto the coordinates
+                    glow.style.transform = `translate3d(${glowX - 250}px, ${glowY - 250}px, 0)`;
+
+                    requestAnimationFrame(render);
+                };
+                render();
+            }
+
+            // Scroll animations
+            const fadeInElements = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            fadeInElements.forEach(el => observer.observe(el));
+
+            // FAQs
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(button => {
+                button.addEventListener('click', () => {
+                    const answer = button.nextElementSibling;
+                    const icon = button.querySelector('svg');
+                    if (answer.style.maxHeight) {
+                        answer.style.maxHeight = null;
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        faqQuestions.forEach(otherButton => {
+                            const otherAnswer = otherButton.nextElementSibling;
+                            if (otherAnswer.style.maxHeight) {
+                                otherAnswer.style.maxHeight = null;
+                                otherButton.querySelector('svg').style.transform = 'rotate(0deg)';
+                            }
+                        });
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+```
+eof
+
+```html:Subtle Media Website:index.html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subtle Media | High-Converting VSLs for SaaS & AI</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #000000; /* Pure black background base */
+            color: #E2E8F0; /* Light gray for body text */
+            position: relative; 
+            overflow-x: hidden;
+        }
+
+        /* Noise overlay for premium grain texture */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            filter: url(#noise);
+            opacity: 0.12;
+            z-index: -1;
+        }
+
+        /* Classic titanium/white text gradient */
+        .gradient-text {
+            background: linear-gradient(90deg, #a1a1aa, #e5e7eb, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Glow effect matching the premium neutral theme */
+        .glow {
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+        }
+
+        /* Glassmorphism card borders with slight warm outline */
+        .glass-card {
+            background: rgba(10, 10, 10, 0.85); 
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .intro-animate {
+            animation: slideInUp 0.8s ease-out forwards;
+            animation-fill-mode: backwards;
+        }
+        
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* 16:9 widescreen video layout helper */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.75rem;
+            background: #000;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* PREMIUM DYNAMIC SEAMLESS CURSOR STYLING */
+        body.custom-cursor-active,
+        body.custom-cursor-active a,
+        body.custom-cursor-active button,
+        body.custom-cursor-active select,
+        body.custom-cursor-active input,
+        body.custom-cursor-active [role="button"],
+        body.custom-cursor-active .video-container {
+            cursor: none !important;
+        }
+
+        #custom-cursor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #ffffff; /* Solid White */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+            pointer-events: none;
+            z-index: 9999;
+            margin-top: -4px;
+            margin-left: -4px;
+            transform: translate3d(0, 0, 0);
+            will-change: transform;
+            display: none; /* Controlled purely via JS */
+            mix-blend-mode: difference; /* INTERACTION ENGINE: Inverts colors of elements underneath */
+            transition: 
+                width 0.22s cubic-bezier(0.25, 1, 0.5, 1), 
+                height 0.22s cubic-bezier(0.25, 1, 0.5, 1), 
+                background-color 0.22s ease, 
+                border 0.22s ease,
+                margin-top 0.22s cubic-bezier(0.25, 1, 0.5, 1),
+                margin-left 0.22s cubic-bezier(0.25, 1, 0.5, 1),
+                opacity 0.22s ease;
+        }
+
+        /* INTERACTIVE RESPONSIVE BACKGROUND GLOW SPOTLIGHT (Subtle Minimalist Grey) */
+        #dynamic-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, rgba(150, 150, 150, 0.02) 35%, rgba(100, 100, 100, 0.005) 65%, transparent 100%);
+            pointer-events: none;
+            z-index: 1;
+            transform: translate3d(-1000px, -1000px, 0);
+            will-change: transform;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        /* Content layer positioning above glow */
+        .page-content {
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Custom Glowing Minimalist White Cursor -->
+    <div id="custom-cursor"></div>
+
+    <!-- Dynamic Interactive Background Glow Spotlight -->
+    <div id="dynamic-glow"></div>
+
+    <!-- Page Content Wrapper (Sits above background glow layer) -->
+    <div class="page-content">
+        <!-- SVG Noise Filter Definition -->
+        <svg style="position:absolute; width:0; height:0; overflow:hidden;" xmlns="http://www.w3.org/2000/svg">
+            <filter id="noise">
+                <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"></feTurbulence>
+                <feColorMatrix type="saturate" values="0"></feColorMatrix>
+            </filter>
+        </svg>
+
+        <header class="sticky top-0 z-50 py-4 intro-animate" style="animation-delay: 100ms;">
+            <div class="container mx-auto px-6">
+                <div class="w-full flex items-center justify-between relative glass-card rounded-full p-2">
+                    <!-- Logo -->
+                    <a href="#" class="flex items-center space-x-2 pl-2">
+                        <img src="https://i.postimg.cc/9Dy2dkg1/logo.png" alt="Subtle Media Logo" class="h-8 w-8">
+                    </a>
+
+                    <!-- Centered Nav -->
+                    <nav class="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 items-center space-x-1 bg-black/45 rounded-full p-1">
+                        <a href="#work" class="text-slate-300 hover:text-white transition-colors px-4 py-1.5 rounded-full text-sm font-medium hover:bg-white/10">Work</a>
+                        <a href="#services" class="text-slate-300 hover:text-white transition-colors px-4 py-1.5 rounded-full text-sm font-medium hover:bg-white/10">Services</a>
+                        <a href="#process" class="text-slate-300 hover:text-white transition-colors px-4 py-1.5 rounded-full text-sm font-medium hover:bg-white/10">Process</a>
+                        <a href="#pricing" class="text-slate-300 hover:text-white transition-colors px-4 py-1.5 rounded-full text-sm font-medium hover:bg-white/10">Pricing</a>
+                        <a href="#faq" class="text-slate-300 hover:text-white transition-colors px-4 py-1.5 rounded-full text-sm font-medium hover:bg-white/10">FAQ</a>
+                    </nav>
+
+                    <!-- Right CTA -->
+                    <a href="https://tally.so/r/dW6QjN" target="_blank" class="hidden md:flex items-center space-x-2 text-slate-200 hover:text-white font-medium py-1.5 px-5 rounded-full hover:bg-white/10 transition-all duration-300 text-sm border border-transparent hover:border-zinc-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-400"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        <span>Get a Proposal</span>
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                   <button class="md:hidden text-white pr-2">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                   </button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero Section with Extended Horizontal Padding / Inset Increments -->
+            <section class="pt-12 pb-16 md:pt-20 md:pb-24">
+                <div class="container mx-auto px-10 sm:px-16 md:px-24 lg:px-32 xl:px-44">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        
+                        <!-- Left Side: Hero Brand Copy -->
+                        <div class="lg:col-span-7 text-left pl-0 sm:pl-4 md:pl-8 lg:pl-12">
+                            <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-tight intro-animate" style="animation-delay: 200ms;">
+                                Turn your story into <span class="gradient-text glow">revenue.</span>
+                            </h2>
+                            <p class="mt-6 max-w-xl text-base md:text-lg text-slate-400 intro-animate" style="animation-delay: 400ms;">
+                                Subtle Media crafts high-converting Video Sales Letters (VSLs) for the most innovative SaaS & AI companies.
+                            </p>
+                            <div class="mt-8 flex flex-col sm:flex-row justify-start items-center gap-4 intro-animate" style="animation-delay: 500ms;">
+                                <a href="https://tally.so/r/dW6QjN" target="_blank" class="bg-white text-gray-900 font-semibold py-3 px-8 rounded-full hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:bg-gray-100 transition-all duration-300 text-base w-full sm:w-auto text-center">
+                                    Schedule a Strategy Call
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Right Side: Hero Constant Looping Non-Interactive Video -->
+                        <div class="lg:col-span-5 intro-animate" style="animation-delay: 600ms;">
+                            <div class="glass-card p-3 rounded-2xl shadow-2xl relative group overflow-hidden">
+                                <!-- Overlay shield to block manual pause, play, hover actions -->
+                                <div class="absolute inset-0 bg-transparent z-20 cursor-default"></div>
+                                
+                                <div class="video-container relative">
+                                    <!-- Embedded looping non-interactive YouTube frame -->
+                                    <iframe class="w-full h-full absolute top-0 left-0 z-10 pointer-events-none" 
+                                            src="https://www.youtube.com/embed/iF2QbgJnwhE?autoplay=1&mute=1&loop=1&playlist=iF2QbgJnwhE&controls=0&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                            allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Separate Grand Work Section with Sized-up Cards and Playback Controls -->
+            <section id="work" class="py-20 border-t border-zinc-800/50 bg-black/40">
+                <div class="container mx-auto px-6">
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <h2 class="text-3xl md:text-4xl font-bold text-white fade-in">Our Featured Case Studies</h2>
+                        <p class="mt-4 text-slate-400 fade-in">Explore our latest high-performing visual creative structured for deep user persuasion. Click any layout to play/pause.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl mx-auto">
+                        <!-- Video 1 -->
+                        <div class="glass-card p-5 rounded-3xl fade-in transition-all duration-300 hover:border-zinc-700/80 hover:shadow-[0_10px_30px_rgba(255,255,255,0.02)]">
+                            <div class="video-container relative">
+                                <iframe class="w-full h-full absolute top-0 left-0 z-10" 
+                                        src="https://www.youtube.com/embed/8i4ID9FlrXw?autoplay=1&mute=1&loop=1&playlist=8i4ID9FlrXw&controls=1&modestbranding=1&rel=0" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen></iframe>
+                            </div>
+                            <div class="mt-6 px-1 text-left">
+                                <h3 class="text-lg font-bold text-white">High-Converting Creative</h3>
+                                <p class="text-slate-400 text-sm mt-1.5">Strategic scripting for modern SaaS.</p>
+                            </div>
+                        </div>
+
+                        <!-- Video 2 -->
+                        <div class="glass-card p-5 rounded-3xl fade-in transition-all duration-300 hover:border-zinc-700/80 hover:shadow-[0_10px_30px_rgba(255,255,255,0.02)]" style="transition-delay: 100ms;">
+                            <div class="video-container relative">
+                                <iframe class="w-full h-full absolute top-0 left-0 z-10" 
+                                        src="https://www.youtube.com/embed/flRxnaGPL4w?autoplay=1&mute=1&loop=1&playlist=flRxnaGPL4w&controls=1&modestbranding=1&rel=0" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen></iframe>
+                            </div>
+                            <div class="mt-6 px-1 text-left">
+                                <h3 class="text-lg font-bold text-white">Visual Storytelling</h3>
+                                <p class="text-slate-400 text-sm mt-1.5">Commercial narrative for AI infra.</p>
+                            </div>
+                        </div>
+
+                        <!-- Video 3 -->
+                        <div class="glass-card p-5 rounded-3xl fade-in transition-all duration-300 hover:border-zinc-700/80 hover:shadow-[0_10px_30px_rgba(255,255,255,0.02)]" style="transition-delay: 200ms;">
+                            <div class="video-container relative">
+                                <iframe class="w-full h-full absolute top-0 left-0 z-10" 
+                                        src="https://www.youtube.com/embed/iF2QbgJnwhE?autoplay=1&mute=1&loop=1&playlist=iF2QbgJnwhE&controls=1&modestbranding=1&rel=0" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen></iframe>
+                            </div>
+                            <div class="mt-6 px-1 text-left">
+                                <h3 class="text-lg font-bold text-white">Product-Led Motion</h3>
+                                <p class="text-slate-400 text-sm mt-1.5">Interactive animation capturing high-intent buyers.</p>
                             </div>
                         </div>
                     </div>
